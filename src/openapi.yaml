@@ -2,13 +2,17 @@ swagger: '2.0'
 x-stoplight:
   id: e27a9bc2d3269
 info:
-  description: 'This is a sample server Petstore server.  You can find out more about Swagger at [http://swagger.io](http://swagger.io) or on [irc.freenode.net, #swagger](http://swagger.io/irc/).  For this sample, you can use the api key `special-key` to test the authorization filters.'
-  version: 1.0.5
-  title: Swagger Petstore
+  description: |-
+    이 프로젝트는 비공식 드림핵 API를 정리하여 문서화하는 커뮤니티 프로젝트입니다. 이 저장소는 원작자의 요청에 따라 언제든 지워질 수 있으며, 현재 API와 일치하지 않을 수도 있는 점 양해 부탁드립니다.
+
+    <a href="https://github.com/sihyeokpark/Unofficial-Dreamhack-API">Github에서 보기</a>
+  version: 1.0.0
+  title: Unofficial DreamHack API
   contact: {}
-  license: {}
-host: 'https://dreamhack.io/api'
-basePath: /v1
+  license:
+    name: MIT
+host: dreamhack.io
+basePath: /api/v1
 tags:
   - name: pet
     description: Everything about your Pets
@@ -24,7 +28,6 @@ tags:
       url: 'http://swagger.io'
 schemes:
   - https
-  - http
 paths:
   '/pet/{petId}/uploadImage':
     post:
@@ -675,3 +678,4 @@ externalDocs:
   description: Find out more about Swagger
   url: 'http://swagger.io'
 produces: []
+x-internal: false
