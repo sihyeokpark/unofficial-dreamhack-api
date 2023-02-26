@@ -29,13 +29,13 @@ tags:
 schemes:
   - https
 paths:
-  /services/suggestion/:
+  /services/suggestion:
     get:
-      summary: /services/suggestion/
+      summary: 검색하기
       tags: []
       responses:
         '200':
-          description: OK
+          description: Success
           schema:
             type: object
             properties: {}
@@ -68,7 +68,6 @@ paths:
           name: keyword
           description: 검색할 키워드
       description: 'kerword 값으로 모든 유저, 포럼, 워게임, 강의를 검색합니다.'
-      x-internal: false
     parameters: []
 securityDefinitions: {}
 definitions:
