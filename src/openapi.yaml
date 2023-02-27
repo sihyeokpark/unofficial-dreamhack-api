@@ -71,7 +71,7 @@ paths:
     parameters: []
   /wargame/challenges/complete:
     get:
-      summary: 워게임 전적
+      summary: 워게임 전적보기
       tags: []
       responses:
         '200':
@@ -123,6 +123,42 @@ paths:
           in: query
           name: user_id
           description: 검색할 유저 아이디
+  /services/state:
+    get:
+      summary: 진행 중인 이벤트보기
+      tags: []
+      responses:
+        '200':
+          description: OK
+          schema:
+            type: object
+            properties: {}
+          examples:
+            'https://dreamhack.io/api/v1/services/state/':
+              ctfs: []
+              rmss:
+                - slug: 2023-gmdsoft-recruit-ctf
+                  title: 2023 GMDSOFT Recruit CTF
+              course_survey: 'https://docs.google.com/forms/d/e/1FAIpQLSepqZUNso22CTwrO1KyVftGG7MD-HiBw_P_jawAj342Y6lBVQ/viewform'
+              WARGAME_RANKED_CATEGORIES:
+                - pwnable
+                - reversing
+                - web
+                - crypto
+              CHALLENGE_VOTE_PERMISSION_SCORE:
+                - 500
+                - 500
+                - 500
+                - 500
+                - 500
+                - 1000
+                - 1000
+                - 1500
+                - 1500
+      operationId: get-services-state
+      description: '현재 진행 중인 CTF, 채용 등을 반환합니다.'
+      parameters: []
+    parameters: []
 securityDefinitions: {}
 definitions:
   ApiResponse:
