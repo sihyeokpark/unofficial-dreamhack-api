@@ -69,6 +69,60 @@ paths:
           description: 검색할 키워드
       description: 'kerword 값으로 모든 유저, 포럼, 워게임, 강의를 검색합니다.'
     parameters: []
+  /wargame/challenges/complete:
+    get:
+      summary: Your GET endpoint
+      tags: []
+      responses:
+        '200':
+          description: OK
+          schema:
+            type: object
+            properties: {}
+          examples:
+            'https://dreamhack.io/api/v1/wargame/challenges/complete/?user_id=6855':
+              suggested_difficulty: []
+              challenges:
+                - difficulty: 0
+                  cnt_by_difficulty: 19
+                  cnt_solved: 0
+                - difficulty: 1
+                  cnt_by_difficulty: 135
+                  cnt_solved: 25
+                - difficulty: 2
+                  cnt_by_difficulty: 61
+                  cnt_solved: 2
+                - difficulty: 3
+                  cnt_by_difficulty: 36
+                  cnt_solved: 0
+                - difficulty: 4
+                  cnt_by_difficulty: 40
+                  cnt_solved: 0
+                - difficulty: 5
+                  cnt_by_difficulty: 29
+                  cnt_solved: 0
+                - difficulty: 6
+                  cnt_by_difficulty: 42
+                  cnt_solved: 0
+                - difficulty: 7
+                  cnt_by_difficulty: 24
+                  cnt_solved: 0
+                - difficulty: 8
+                  cnt_by_difficulty: 14
+                  cnt_solved: 0
+                - difficulty: 9
+                  cnt_by_difficulty: 6
+                  cnt_solved: 0
+                - difficulty: 10
+                  cnt_by_difficulty: 6
+                  cnt_solved: 0
+      operationId: get-wargame-challenges-complete
+      description: 사용자가 푼 워게임 문제의 난이도를 반환합니다.
+      parameters:
+        - type: string
+          in: query
+          name: user_id
+          description: 검색할 유저 아이디
 securityDefinitions: {}
 definitions:
   ApiResponse:
