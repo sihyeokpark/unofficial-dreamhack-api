@@ -71,7 +71,7 @@ paths:
     parameters: []
   /wargame/challenges/complete:
     get:
-      summary: Your GET endpoint
+      summary: 워게임 전적
       tags: []
       responses:
         '200':
